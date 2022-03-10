@@ -1,0 +1,21 @@
+.gif-section{
+    height: 390px;
+    width: 100%;
+    overflow-y: scroll;
+}
+ 
+.live-gifs{
+    width: 100%;
+    object-fit: contain;
+}
+.last{
+    height: 390px;
+    width: 100%;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+.gif-section-two{
+    height: 250px;
+    width: 100%;
+    overflow-y: scroll;
+}

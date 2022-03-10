@@ -1,0 +1,10 @@
+.image-gifs{
+    position: relative;
+}
+.fa-times{
+    position: absolute;
+    top: 20px;
+    left: 90%;
+    cursor: pointer;
+    border: 1px solid red;
+}
