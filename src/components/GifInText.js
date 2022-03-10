@@ -6,11 +6,13 @@ import "./componentsStyles/GifInText.css"
 const GifInText = ({gifId, openGif, onCloseGif }) => {
 
     const [post, setPost] = useState({});
+
+    const {REACT_APP_GIPHY_KEY} = process.env;
     
     const fetchData = async () =>{
           await axios.get(`https://api.giphy.com/v1/gifs/${gifId}`,{
                 params: { 
-                    api_key: "Xoa3mXrWxKXw6lJscrKUTsbZsXLbGuGY",
+                    api_key: REACT_APP_GIPHY_KEY,
                     gif_id: gifId
                 }
             }).catch((error) =>{
@@ -19,8 +21,6 @@ const GifInText = ({gifId, openGif, onCloseGif }) => {
                 setPost(response.data)
               });
             }
-     
-   
 
     useEffect(()=>{
         fetchData()

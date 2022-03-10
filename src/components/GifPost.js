@@ -14,12 +14,14 @@ const GifPost = () => {
     const [gifId, setGifId] = useState([ ])
     const [isOpenGif, setIsOpenGif] = useState(false);
    //console.log("gifs:",gifs )
-  
+
+    const {REACT_APP_GIPHY_KEY} = process.env;
+
     const fetchData = async () =>{
         const response = await axios
         .get("https://api.giphy.com/v1/gifs/trending",{
             params: {
-                api_key: "Xoa3mXrWxKXw6lJscrKUTsbZsXLbGuGY"
+                api_key: REACT_APP_GIPHY_KEY
             }
         }).catch((error) =>{
             console.log("error at fetching data", error);
@@ -35,7 +37,7 @@ const GifPost = () => {
         const response = await axios
         .get("https://api.giphy.com/v1/gifs/search",{
             params: {
-                api_key: "Xoa3mXrWxKXw6lJscrKUTsbZsXLbGuGY",
+                api_key: REACT_APP_GIPHY_KEY,
                 q: searchGif
             }
         }).catch((error) =>{
