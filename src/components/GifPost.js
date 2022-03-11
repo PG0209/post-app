@@ -13,8 +13,7 @@ const GifPost = () => {
     const [gifs, setGifs] = useState([])
     const [gifId, setGifId] = useState([ ])
     const [isOpenGif, setIsOpenGif] = useState(false);
-   //console.log("gifs:",gifs )
-
+   
     const {REACT_APP_GIPHY_KEY} = process.env;
 
     const fetchData = async () =>{
@@ -56,8 +55,6 @@ const GifPost = () => {
          
     }, [ ]);
 
-   
-      
     function removeGif(){
         setIsOpenGif(false);
         window.location.reload()
