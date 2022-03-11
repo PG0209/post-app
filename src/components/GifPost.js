@@ -9,7 +9,7 @@ import GifInText from './GifInText';
 
 const GifPost = () => {
     const [showGifs, setShowGifs] = useState(false)
-    const [searchGif, setSearchGif] = useState("")
+    const [searchGif, setSearchGif] = useState([])
     const [gifs, setGifs] = useState([])
     const [gifId, setGifId] = useState([ ])
     const [isOpenGif, setIsOpenGif] = useState(false);
@@ -45,6 +45,7 @@ const GifPost = () => {
           })
           setSearchGif(setGifs(response.data));
       };
+     
 
       const getGifId = (id) => {
         setGifId(id);
@@ -54,11 +55,12 @@ const GifPost = () => {
         fetchData()
          
     }, [ ]);
+
+   
       
     function removeGif(){
         setIsOpenGif(false);
         window.location.reload()
-       
     }
 
   return (
@@ -117,7 +119,7 @@ const GifPost = () => {
                                         {
                                             gifs.data.map((items)=>{
                                                 return(
-                                                    <a href="#" className='image-gifs' key={items.id}>
+                                                    <a className='image-gifs' key={items.id}>
                                                         <img className="live-gifs" onClick={()=> {getGifId(items.id); setIsOpenGif(true)}} src={items.images.fixed_height.url} alt="..."/>
                                                     </a>
                                                 )

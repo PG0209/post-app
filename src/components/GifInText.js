@@ -33,10 +33,11 @@ const GifInText = ({gifId, openGif, onCloseGif }) => {
             <div className='gif-section-two'>   
                  {post.data && (
                     <>
-                    <div className='image-gifs'>
-                     <i className="fas fa-times" onClick={onCloseGif}></i>
-                      <img className="live-gifs" src={post.data.images.fixed_height.url} alt="..."/>
-                    </div>
+                     <div className='image-gifs'>
+                       <i className="fas fa-times" onClick={onCloseGif}></i>
+                       <img className="live-gifs" src={post.data.images.fixed_height.url} alt="..."/>
+                     </div>
+                       <button className="text-post-btn">Post</button>
                     </>
                 )}
             </div> 

@@ -163,6 +163,11 @@ button.compose-post{
 .gif-head{
     text-align: center;
 }
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
  
 .searchbar{
     width: 100%;
@@ -184,7 +189,7 @@ input[type="search"]::-webkit-search-results-decoration {
     position: absolute;
     margin-top: 10px;
     padding: 10px;
-    right: 34%;
+    text-align: end;
     color: #000;
     cursor: pointer;
 }
